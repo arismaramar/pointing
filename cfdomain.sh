@@ -32,7 +32,6 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","proxied":false}')
 echo $SUB_DOMAIN >/etc/xray/domain
 echo "Subdomain kamu adalah : $SUB_DOMAIN"
-echo "IP=$dns" > /var/lib/LT/ipvps.conf
 cd
 sleep 3
 rm -f /root/cfdomain.sh
